@@ -82,7 +82,7 @@ const ProductsPage = () => {
               <img src={item.image} alt={item.title} />
               <h2 className="text-lg font-semibold">{item.title}</h2>
               <p className="text-purple-800">{item.category}</p>
-              <p className="text-purple-600 font-bold">{item.price}</p>
+              <p className="text-purple-600 font-bold">{item.price} $</p>
             </div>
           </CSSTransition>
         ))}
