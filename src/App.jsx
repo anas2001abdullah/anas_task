@@ -4,7 +4,7 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Loader from "./components/Loader/Loader";
 
-const Product = lazy(() => import("./pages/ProductsPage"));
+const Product = lazy(() => import("./pages/ProductPage/ProductsPage"));
 const Login = lazy(() => import("./pages/LoginPage"));
 
 function App() {
