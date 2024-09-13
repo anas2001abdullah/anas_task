@@ -6,7 +6,7 @@ import hat2 from "../assets/hat2.jpeg";
 import pant1 from "../assets/pants.jpeg";
 import pant2 from "../assets/pants2.jpeg";
 import "./style.css";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 const items = [
   {
     id: 1,
@@ -72,7 +72,7 @@ const ProductsPage = () => {
           <option value="pants">Pants</option>
         </select>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <TransitionGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredItems.map((item) => (
           <CSSTransition key={item.id} timeout={500} classNames="fade">
             <div
@@ -86,7 +86,7 @@ const ProductsPage = () => {
             </div>
           </CSSTransition>
         ))}
-      </div>
+      </TransitionGroup>
     </div>
   );
 };
