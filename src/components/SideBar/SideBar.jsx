@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/TrendLogo.png";
 const navigation = [
   { name: "HomePage", href: "#" },
-  { name: "Trading", href: "/products" },
+  { name: "Trading", href: "/" },
   { name: "About us", href: "#" },
   { name: "Contact us", href: "#" },
 ];
@@ -28,19 +28,19 @@ const SideBar = ({ user, onLogout }) => {
 
             <div className="flex items-center ms-3 text-purple-950">
               {user ? (
-                <Link
-                  to="/login"
-                  className="text-base font-semibold leading-6 text-purple-950 hover:text-purple-300"
-                >
-                  Log in
-                </Link>
-              ) : (
                 <button
                   onClick={onLogout}
                   className="text-base font-semibold leading-6 text-purple-950 hover:text-purple-300"
                 >
                   Sign Out
                 </button>
+              ) : (
+                <Link
+                  to="/login"
+                  className="text-base font-semibold leading-6 text-purple-950 hover:text-purple-300"
+                >
+                  Log in
+                </Link>
               )}
               <button
                 type="button"

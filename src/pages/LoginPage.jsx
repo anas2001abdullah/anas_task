@@ -42,7 +42,7 @@ const Login = ({ onLogin }) => {
       const data = await result.json();
       if (data.success) {
         onLogin(data.data.user, data.data.token);
-        navigate("/products");
+        navigate("/");
       } else {
         if (data.field === "email") {
           setErrors((prevErrors) => ({

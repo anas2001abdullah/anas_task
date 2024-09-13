@@ -45,8 +45,7 @@ function App() {
               <Layout user={user} token={token} onLogout={handleLogout} />
             }
           >
-            <Route path="/products" element={<Product />} />
-            {/* <Route path="*" element={<Error404 />} /> */}
+            <Route path="/" element={<Product />} />
           </Route>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
         </Routes>
